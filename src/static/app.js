@@ -912,7 +912,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const url = getActivityUrl(activityName);
     const formattedSchedule = formatSchedule(details);
     const subject = `Check out ${activityName} at Mergington High School!`;
-    const body = `Hi!\n\nI thought you might be interested in this activity:\n\n${activityName}\n${details.description}\n\nSchedule: ${formattedSchedule}\nSpots available: ${details.max_participants - details.participants.length} of ${details.max_participants}\n\nLearn more: ${url}`;
+    const participantsCount = details.participants ? details.participants.length : 0;
+    const spotsAvailable = details.max_participants - participantsCount;
+    const body = `Hi!\n\nI thought you might be interested in this activity:\n\n${activityName}\n${details.description}\n\nSchedule: ${formattedSchedule}\nSpots available: ${spotsAvailable} of ${details.max_participants}\n\nLearn more: ${url}`;
     
     window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
