@@ -325,6 +325,11 @@ document.addEventListener("DOMContentLoaded", () => {
       name.includes("theater") ||
       name.includes("drama") ||
       name.includes("manga") ||
+      desc.includes("art") ||
+      desc.includes("music") ||
+      desc.includes("theater") ||
+      desc.includes("drama") ||
+      desc.includes("manga") ||
       desc.includes("creative") ||
       desc.includes("paint") ||
       desc.includes("graphic novels")
