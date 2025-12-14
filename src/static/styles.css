@@ -190,6 +190,66 @@ section h3 {
   justify-content: center;
 }
 
+/* Share Buttons */
+.share-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-light);
+}
+
+.share-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.share-button {
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.share-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.share-button.facebook-share:hover {
+  background-color: #1877f2;
+  border-color: #1877f2;
+}
+
+.share-button.twitter-share:hover {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.share-button.email-share:hover {
+  background-color: #ea4335;
+  border-color: #ea4335;
+}
+
+.share-button.copy-link:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.share-icon {
+  font-size: 1rem;
+}
+
 /* Activity Tag */
 .activity-tag {
   position: absolute;
@@ -296,6 +356,17 @@ button {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s;
+}
+
+/* Auth notice */
+.auth-notice {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  padding: 8px;
+  background-color: var(--background);
+  border-radius: 4px;
+  width: 100%;
 }
 
 /* Tooltip styles */
